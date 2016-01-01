@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the note module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function note_install() {
+  // Ensure the note node type is available.
+  node_types_rebuild();
+  $types = node_type_get_types();
+  node_add_body_field($types['note']);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function note_uninstall() {
+  //variable_del('note_block_count');
+}

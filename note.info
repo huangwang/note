@@ -1,0 +1,6 @@
+name = Note
+description = Enables multi-user notes.
+package = Core
+version = VERSION
+core = 7.x
+files[] = note.test
