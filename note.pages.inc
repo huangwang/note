@@ -20,7 +20,7 @@ function note_page_user($account) {
     ->fields('n', array('nid', 'sticky', 'created'))
     ->condition('type', 'note')
     ->condition('uid', $account->uid)
-    ->condition('status', 1)
+    ->condition('status', 0)
     ->orderBy('sticky', 'DESC')
     ->orderBy('created', 'DESC')
     ->limit(variable_get('default_nodes_main', 10))
