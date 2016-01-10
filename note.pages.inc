@@ -44,7 +44,7 @@ function note_page_user($account) {
       drupal_set_message(t('!author has not created any note entries.', array('!author' => theme('username', array('account' => $account)))));
     }
   }
-  drupal_add_feed('note/' . $account->uid . '/feed', t('RSS - !title', array('!title' => $title)));
+  //drupal_add_feed('note/' . $account->uid . '/feed', t('RSS - !title', array('!title' => $title)));
 
   return $build;
 }
